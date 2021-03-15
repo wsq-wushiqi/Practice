@@ -1,0 +1,78 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-03 23:11:22
+ * @LastEditTime: 2021-03-03 23:26:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 使用小米网站布局练习浮动布局
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\07 - 浮动练习.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+    .box1 {
+      width: 1225px;
+      height: 460px;
+      background-color: green;
+      margin: 50px auto;
+    }
+    .box1 .left-box {
+      float: left;
+      width: 345px;
+      height: 100%;
+      background-color: indianred;
+    }
+    .box1 .right-box {
+      float: left;
+      width: 880px;
+      height: 100%;
+      background-color: lightblue;
+    }
+    .box2 {
+      width: 1225px;
+      height: 170px;
+      background-color: lightcoral;
+      margin: 20px auto;
+    }
+    /* .box2 ul {
+      width: 100%;
+    } */
+    .box2 li {
+      float: left;
+      width: 315px;
+      height: 170px;
+      background-color: peru;
+      margin-left: 15px;
+    }
+    .box2 .first {
+      width: 235px;
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="left-box">左边</div>
+    <div class="right-box">右边</div>
+  </div>
+
+  <div class="box2">
+    <ul>
+      <li class="first">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+</body>
+</html>

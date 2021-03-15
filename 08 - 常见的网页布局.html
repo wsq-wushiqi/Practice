@@ -1,0 +1,68 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-04 21:26:31
+ * @LastEditTime: 2021-03-04 21:40:06
+ * @LastEditors: Please set LastEditors
+ * @Description: 常见的网页布局
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\08 - 常见的网页布局.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>常见的网页布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+    .top {
+      background-color: gray;
+      height: 60px;
+    }
+    .banner {
+      width: 1120px;
+      height: 157px;
+      background-color: rgb(214, 148, 148);
+      margin: 10px auto;
+    }
+    .middle {
+      width: 1120px;
+      height: 320px;
+      background-color: rgb(167, 132, 192);
+      margin: 10px auto;
+    }
+    .middle li {
+      float: left;
+      width: 272px;
+      height: 320px;
+      background-color: lightblue;
+      margin-right: 10px;
+    }
+    .middle .last {
+      margin-right: 0;
+    }
+    .footer {
+      height: 70px;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">top</div>
+  <div class="banner">banner</div>
+  <div class="middle">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li class="last">4</li>
+    </ul>
+  </div>
+  <div class="footer">footer</div>
+</body>
+</html>

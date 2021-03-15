@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-03 21:19:41
+ * @LastEditTime: 2021-03-03 21:40:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\06 - 盒子阴影.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子阴影</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: steelblue;
+      margin: 50px auto;
+      color: white;
+      text-align: center;
+      line-height: 200px;
+    }
+    .box:hover {
+      box-shadow: 5px 6px 17px 3px gray;
+      transition: .3s;
+    }
+    .shadow-span {
+      color: chocolate;
+      font-size: 50px;
+      font-weight: 700;
+    }
+    .shadow-span:hover {
+      text-shadow: 6px 5px 8px gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    鼠标悬浮时显示阴影
+  </div>
+  <span class="shadow-span">我的文字有阴影哦</span>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-13 23:17:22
+ * @LastEditTime: 2021-03-13 23:40:34
+ * @LastEditors: Please set LastEditors
+ * @Description: 淘宝盒子
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\18 - 淘宝盒子.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淘宝盒子</title>
+  <style>
+    ul li {
+      float: left;
+      position: relative;
+      list-style: none;
+      width: 150px;
+      height: 200px;
+      border: 1px solid gray;
+      margin-left: -1px;
+    }
+    ul li:hover {
+      /* 1.如果盒子没有定位，添加position定位即可 */
+      position: relative;
+      /* 2.如果盒子已经有定位，添加层级z-index即可 */
+      z-index: 1;
+      border: 1px solid orange;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</body>
+</html>

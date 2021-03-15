@@ -1,0 +1,90 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-10 20:54:50
+ * @LastEditTime: 2021-03-10 22:30:27
+ * @LastEditors: Please set LastEditors
+ * @Description: 精灵图使用
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\15 - 精灵图使用.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精灵图的使用</title>
+  <style>
+    .box1,
+    .box2,
+    .box3 {
+      background: url(image/sprites.png) no-repeat;
+    }
+    .box1 {
+      width: 60px;
+      height: 56px;
+      background-position: -182px 0;
+      margin: 20px;
+    }
+    .box2 {
+      width: 27px;
+      height: 26px;
+      margin: 40px;
+      background-position: -155px -106px;
+    }
+    .box3 {
+      width: 242px;
+      height: 129px;
+      margin: 50px;
+      background-position: 0 -219px;
+    }
+    .title {
+      line-height: 50px;
+      font-size: 30px;
+      color: rgb(231, 145, 88);
+      font-weight: 700;
+      text-shadow: rgb(236, 182, 111) 3px 2px 10px;
+    }
+    .name span {
+      display: inline-block;
+      background: url(image/abcd.jpg) no-repeat;
+    }
+    .name .wu {
+      width: 135px;
+      height: 107px;
+      background-position: -117px -562px;
+    }
+    .name .shi {
+      width: 112px;
+      height: 110px;
+      background-position: -257px -420px;
+    }
+    .name .qi {
+      width: 106px;
+      height: 109px;
+      background-position: -8px -417px;
+    }
+    .name .chen {
+      width: 103px;
+      height: 108px;
+      background-position: -239px -10px;
+    }
+    .name .feng {
+      width: 93px;
+      height: 111px;
+      background-position: 0 -140px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="title">拼出自己的名字</div>
+  <div class="name">
+    <span class="wu"></span>
+    <span class="shi"></span>
+    <span class="qi"></span>
+    <!-- <span class="chen"></span>
+    <span class="feng"></span> -->
+  </div>
+</body>
+</html>

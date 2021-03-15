@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-07 15:25:09
+ * @LastEditTime: 2021-03-07 15:32:28
+ * @LastEditors: Please set LastEditors
+ * @Description: 绝对定位的盒子水平垂直居中
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\11 - 绝对定位盒子水平垂直居中.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绝对定位的盒子水平垂直居中</title>
+  <style>
+    .box {
+      position: absolute;
+      /* 水平居中： */
+      /* 1.先向右移动浏览器可视区域的一半 */
+      left: 50%;
+      /* 2.再往左移回盒子宽度的一半 */
+      margin-left: -100px;
+      /* 垂直居中 */
+      /* 1.先向下移动浏览器可是区域的一半 */
+      top: 50%;
+      /* 2.再往上移回盒子高度的一半 */
+      margin-top: -100px;
+      width: 200px;
+      height: 200px;
+      background-color: coral;
+      /* 添加绝对定位后，margin: 0 auto;的居中方法没有效果 */
+      /* margin: 0 auto; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">需要水平垂直居中的盒子</div>
+</body>
+</html>

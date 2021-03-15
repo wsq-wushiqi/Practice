@@ -1,0 +1,153 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-13 16:37:40
+ * @LastEditTime: 2021-03-14 11:52:52
+ * @LastEditors: Please set LastEditors
+ * @Description: CSS三角形
+ * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\17 - CSS三角形.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS三角形</title>
+  <style>
+    /* 清除浮动 */
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .clearfix {
+      *zoom: 1;
+    }
+    .box div {
+      float: left;
+      margin-left: 10px;
+      width: 0;
+      height: 0;
+      /* 照顾兼容性 */
+      line-height: 0;
+      font-size: 0;
+      border: 10px solid transparent;
+    }
+    .box .top {
+      border-top-color: purple;
+    }
+    .box .right {
+      border-right-color: springgreen;
+    }
+    .box .bottom {
+      border-bottom-color: blue;
+    }
+    .box .left {
+      border-left-color: salmon;
+    }
+    .box1 {
+      float: left;
+      position: relative;
+      margin: 50px;
+      width: 200px;
+      height: 300px;
+      background-color: steelblue;
+    }
+    .box1 .tip {
+      position: absolute;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: 10px solid transparent;
+      border-bottom-color: steelblue;
+      right: 15px;
+      top: -20px;
+    }
+    .box2 {
+      float: left;
+      position: relative;
+      margin: 50px 20px;
+      width: 100px;
+      height: 200px;
+      background-color: rosybrown;
+    }
+    .box2 .tip {
+      position: absolute;
+      right: -20px;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: 10px solid transparent;
+      border-left-color: rosybrown;
+      top: 20px;
+    }
+    .box3 {
+      margin: 500px;
+      width: 100%;
+    }
+    .box3 .zhijiao {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent red transparent transparent;
+      border-width: 100px 50px 0 0;
+    }
+    .price {
+      width: 160px;
+      height: 24px;
+      border: 1px solid red;
+      line-height: 24px;
+    }
+    .now {
+      float: left;
+      position: relative;
+      width: 60%;
+      height: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+      margin-right: 8px;
+    }
+    .now i {
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent white transparent transparent;
+      border-width: 24px 12px 0 0;
+    }
+    .old {
+      color: gray;
+      font-size: 14px;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <div class="box clearfix">
+    <div class="top"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+  </div>
+  <div class="box1">
+    <span class="tip"></span>
+  </div>
+  <div class="box2">
+    <span class="tip"></span>
+  </div>
+  <div class="box3"> 
+    <p>直角三角形</p>
+    <div class="zhijiao"></div>
+    <div>价格栏</div>
+    <div class="price">
+      <span class="now">￥156<i></i></span>
+      <span class="old">￥499</span>
+    </div>
+  </div>
+</body>
+</html>
