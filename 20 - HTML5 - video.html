@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-15 22:12:55
- * @LastEditTime: 2021-03-15 22:13:16
+ * @LastEditTime: 2021-03-15 23:14:46
  * @LastEditors: Please set LastEditors
  * @Description: HTML5 video
  * @FilePath: \vue-bilibili-masterf:\lean\html\HTML\20 - HTML5 - video.html
@@ -12,8 +12,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML5 video</title>
+  <style>
+    video {
+      position: absolute;
+      width: 500px;
+      left: 50%;
+      margin-left: -250px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-  
+  <video src="media/mi.mp4" autoplay controls loop poster="media/mi.jpg" muted></video>
+  <!-- <audio src="media/music.mp3" autoplay loop controls></audio> -->
 </body>
 </html>
