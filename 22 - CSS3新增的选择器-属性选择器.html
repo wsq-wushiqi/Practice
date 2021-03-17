@@ -1,0 +1,57 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-16 21:32:52
+ * @LastEditTime: 2021-03-17 20:49:31
+ * @LastEditors: Please set LastEditors
+ * @Description: CSS3新增的选择器 - 属性选择器
+ * @FilePath: \Practice\22 - CSS3新增的选择器.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>属性选择器</title>
+  <style>
+    input[value] {
+      color: brown;
+    }
+    input[type=number] {
+      color: darkblue;
+    }
+    span[class^=content] {
+      color: darksalmon;
+    }
+    span[class$=val] {
+      color: darkseagreen;
+    }
+    span[class*=happy] {
+      color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+  <h3>1.属性选择器</h3>
+  <p>1.input[value]</p>
+  <input type="text" value="">
+  <input type="text">
+  <p>2.input[type=number]</p>
+  <input type="text">
+  <input type="number">
+  <p>3.span[class^=content]</p>
+  <span class="content1">苹果</span>
+  <span class="content2">草莓</span>
+  <span class="content3">西瓜</span>
+  <span class="other">茄子</span>
+  <p>4.span[class$=val]</p>
+  <span class="a-val">南瓜</span>
+  <span class="b-val">土豆</span>
+  <span class="c-val">番茄</span>
+  <span class="d">葡萄</span>
+  <p>5.span[class*=happy]</p>
+  <span class="happy1">石头</span>
+  <span class="happy3">剪刀</span>
+  <span class="no">不</span>
+  <span class="happy2">布</span>
+</body>
+</html>

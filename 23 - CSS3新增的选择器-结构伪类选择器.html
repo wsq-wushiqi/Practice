@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-16 22:14:46
+ * @LastEditTime: 2021-03-17 20:49:24
+ * @LastEditors: Please set LastEditors
+ * @Description: CSS3新增的选择器 - 结构伪类选择器
+ * @FilePath: \Practice\23 - 结构伪类选择器.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类选择器</title>
+  <style>
+    /* 选择第一个 */
+    ul li:first-child {
+      background-color: goldenrod;
+    }
+    /* 选择最后一个 */
+    ul li:last-child {
+      background-color: green;
+    }
+    /* 选择第三个 */
+    ul li:nth-child(3) {
+      background-color: indianred;
+    }
+    /* 选择第六个 */
+    ul li:nth-child(6) {
+      background-color: indianred;
+    }
+    /* 选出所有偶数行 */
+    ul li:nth-child(even) {
+      background-color: indigo;
+    }
+    /* 选出所有奇数 */
+    ul li:nth-child(odd) {
+      background-color: mediumpurple;
+    }
+    /* 选出所有节点 */
+    ul li:nth-child(n) {
+      background-color: mediumseagreen;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>我是第1个孩子</li>
+    <li>我是第2个孩子</li>
+    <li>我是第3个孩子</li>
+    <li>我是第4个孩子</li>
+    <li>我是第5个孩子</li>
+    <li>我是第6个孩子</li>
+    <li>我是第7个孩子</li>
+    <li>我是第8个孩子</li>
+  </ul>
+</body>
+</html>

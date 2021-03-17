@@ -1,0 +1,69 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-17 20:50:21
+ * @LastEditTime: 2021-03-17 22:26:21
+ * @LastEditors: Please set LastEditors
+ * @Description: CSS3新增的选择器-伪元素选择器.html
+ * @FilePath: \Practice\24 - 23 - CSS3新增的选择器-伪元素选择器.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素选择器</title>
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      src: url('iconfont/iconfont.eot');
+      src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+          url('iconfont/iconfont.woff2') format('woff2'),
+          url('iconfont/iconfont.woff') format('woff'),
+          url('iconfont/iconfont.ttf') format('truetype'),
+          url('iconfont/iconfont.svg#iconfont') format('svg');
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: olivedrab;
+    }
+    /* 伪元素默认是行内元素 */
+    .box1::before {
+      content: '我';
+      background-color: orange;
+      display: inline-block;
+      width: 20px;
+      height: 50px;
+    }
+    .box1::after {
+      content: '小猪佩奇';
+      background-color: pink;
+    }
+    .select-box {
+      position: relative;
+      width: 250px;
+      height: 40px;
+      border: 1px solid gray;
+    }
+    .select-box::after {
+      position: absolute;
+      font-family: "iconfont";
+      content: '\e687';
+      right: 10px;
+      line-height: 40px;
+    }
+    .clearfix::after {
+      content: '';
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">是</div>
+  <h3>伪元素使用场景：字体图标</h3>
+  <div class="select-box"></div>
+</body>
+</html>
