@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-17 22:29:22
+ * @LastEditTime: 2021-03-17 23:12:14
+ * @LastEditors: Please set LastEditors
+ * @Description: CSS3新特性-图像模糊、calc()
+ * @FilePath: \Practice\25 - CSS3新特性-图像模糊、calc().html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3新特性-图像模糊、calc()</title>
+  <style>
+    img {
+      filter: blur(3px);
+    }
+    img:hover {
+      filter: blur(0);
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: indianred;
+    }
+    .box2 {
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <img src="image/computer.jpg" alt="">
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+</body>
+</html>
