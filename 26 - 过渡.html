@@ -1,0 +1,70 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-18 20:47:50
+ * @LastEditTime: 2021-03-20 16:48:43
+ * @LastEditors: Please set LastEditors
+ * @Description: 过渡
+ * @FilePath: \Practice\26 - 过渡.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>过渡</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+    .box1:hover {
+      width: 200px;
+      height: 200px;
+      background-color: lightcoral;
+      transition: all .5s;
+    }
+    .bar {
+      width: 200px;
+      height: 15px;
+      border: 1px solid lightcoral;
+      border-radius: 7.5px;
+      padding: 1px;
+    }
+    .bar-in {
+      width: 50%;
+      height: 100%;
+      background-color: lightcoral;
+      border-radius: 7.5px 0 0 7.5px;
+    }
+    .bar:hover .bar-in {
+      width: 100%;
+      border-radius: 7.5px;
+      transition: .5s;
+    }
+    .mi-logo {
+      background-color: orangered;
+      width: 55px;
+      height: 55px;
+    }
+    .mi-logo:hover .img1 {
+      margin-left: -55px;
+    }
+    .mi-logo:hover img {
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <p>进度条：</p>
+  <div class="bar">
+    <div class="bar-in"></div>
+  </div>
+  <p>小米图标：</p>
+  <div class="mi-logo">
+    <img src="image/mi-logo.png" alt="" class="img1">
+    <img src="image/mi-home.png" alt="">
+  </div>
+</body>
+</html>
