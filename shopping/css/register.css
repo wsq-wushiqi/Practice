@@ -1,0 +1,125 @@
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 82px;
+  border-bottom: 2px solid #c51929;
+}
+.logo {
+  padding-top: 17px;
+}
+.registerarea {
+  height: 465px;
+  border: 1px solid #ccc;
+  margin-top: 22px;
+}
+.registerarea h3 {
+  height: 42px;
+  line-height: 42px;
+  border-bottom: 1px solid #ccc;
+  background-color: #ececec;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+.registerarea h3 .login {
+  float: right;
+  font-size: 14px;
+}
+.login a {
+  color: #c6192a;
+}
+.reg_form {
+  width: 600px;
+  margin: 55px auto 0;
+}
+.reg_form ul li {
+  margin-bottom: 20px;
+}
+.reg_form ul li label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+}
+.reg_form ul li .ipt {
+  width: 240px;
+  height: 36px;
+  border: 1px solid #ccc;
+}
+.error {
+  color: #c51929;
+}
+.success {
+  color: #40b83f;
+}
+.success_icon,
+.error_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/success.png');
+  vertical-align: middle;
+  margin: -2px 5px 0 10px;
+}
+.error_icon {
+  background: url('../images/error.png');
+}
+.reg_form .safe {
+  width: 240px;
+  text-align: right;
+  margin-left: 80px;
+}
+.safe em {
+  display: inline-block;
+  width: 35px;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: #fff;
+  margin-left: 1px;
+}
+.safe em:first-child {
+  margin-left: 7px;
+}
+.ruo {
+  background-color: #de1111;
+}
+.zhong {
+  background-color: #40b83f;
+}
+.qiang {
+  background-color: #f79100;
+}
+.agree {
+  width: 360px;
+  text-align: center;
+}
+.agree input[type=checkbox] {
+  vertical-align: middle;
+  margin-right: 13px;
+  width: 16px;
+  height: 16px;
+  background-color: #f2f2f2;
+}
+.agree a {
+  color: #1ba1e6;
+}
+.btn {
+  width: 200px;
+  height: 34px;
+  background-color: #c81623;
+  color: #fff;
+}
+.mod_copyright {
+  padding-top: 20px;
+  text-align: center;
+
+}
+.mod_copyright a {
+  margin: 0 15px;
+}
+.mod_copyright .copyright {
+  margin-top: 6px;
+  line-height: 22px;
+}
