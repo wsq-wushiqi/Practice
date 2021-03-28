@@ -1,0 +1,140 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-27 23:34:36
+ * @LastEditTime: 2021-03-28 17:15:20
+ * @LastEditors: Please set LastEditors
+ * @Description: 2D转换
+ * @FilePath: \Practice\shopping\upload\27  - 2D转换.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D转换</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      /* x轴和y轴都移动 */
+      transform: translate(100px, 100px);
+      /* 只移动x轴 */
+      transform: translateX(100px);
+      /* 只移动y轴 */
+      transform: translateY(100px);
+      /* 移动自身宽高的50% */
+      transform: translate(50%, 50%);
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: goldenrod;
+      transition: all 0.5s;
+      text-align: center;
+    }
+    .box2:hover {
+      transform: rotate(360deg);
+      /* 延右下角旋转 */
+      transform-origin: right bottom;
+      /* 延上边框30px处旋转 */
+      transform-origin: 30px 0;
+      /* 延上边框中点旋转 */
+      transform-origin: 50% 0;
+    }
+    .box3 {
+      position: relative;
+      width: 250px;
+      height: 35px;
+      border: 1px solid rgb(84, 84, 84);
+      margin: 10px;
+    }
+    .box3::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 11px;
+      top: 11px;
+      border-bottom: 1px solid rgb(84, 84, 84);
+      border-right: 1px solid rgb(84, 84, 84);
+      transform: rotate(45deg);
+      transition: all .3s;
+    }
+    .box3:hover::after {
+      transform: rotate(225deg);      
+    }
+    .box4 {
+      float: left;
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgb(236, 178, 84);
+      margin: 10px;
+      overflow: hidden;
+    }
+    .box4::after {
+      content: '看我';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(236, 178, 84);
+      transform: rotate(90deg);
+      transform-origin: left bottom;
+      transition: all .2s;
+    }
+    .box4:hover::after {
+      transform: rotate(0deg);
+    }
+    .box5 {
+      width: 100px;
+      height: 300px;
+    }
+    .box6 {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background-color: dimgray;
+    }
+    .box6:hover {
+      /* 横纵都放大两倍， 等价于transform: scale(2); */
+      transform: scale(2, 2);
+      /* 横纵都缩小至原来的二分之一 */
+      /* transform: scale(0.5); */  
+      /* 设置左上角为中心点，左边和上边框位置不变 */
+      transform-origin: top left;
+    }
+    .box7 {
+      width: 100px;
+      height: 100px;
+      background-color: indianred;
+      margin-bottom: 200px;
+      transition: all .5s;
+    }
+    .box7:hover {
+      transform: translate(60px, 50px) rotate(180deg);
+      transform: rotate(180deg) translate(60px, 50px);
+    }
+  </style>
+</head>
+<body>
+  <p style="border-bottom:1px solid red;">移动translate</p>
+  <div class="box1"></div>
+  <p style="border-bottom:1px solid red;margin-top: 100px;">旋转rorate</p>
+  <div class="box2">鼠标移过来旋转</div>
+  <p style="border-bottom:1px solid red;margin-top: 100px;">手写三角下拉框效果</p>
+  <div class="box3"></div>
+  <p style="border-bottom:1px solid red;margin-top: 100px;">旋转中心transform-origin案例</p>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box5"></div>
+  <p style="border-bottom:1px solid red;margin-top: 100px;">缩放scale</p>
+  <div class="box6"></div>
+  <p style="border-bottom:1px solid red;margin-top: 100px;">同时位移和旋转</p>
+  <div class="box7"></div>
+</body>
+</html>
