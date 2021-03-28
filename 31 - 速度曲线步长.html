@@ -1,0 +1,46 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-28 23:42:54
+ * @LastEditTime: 2021-03-28 23:49:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 速度曲线步长
+ * @FilePath: \Practice\31 - 速度曲线步长.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>速度曲线步长</title>
+  <style>
+    div {
+      width: 200px;
+      height: 30px;
+      
+      background-color: indianred;
+    }
+    span {
+      line-height: 30px;
+      font-size: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 0;
+      /* steps表示分几步完成动画 */
+      animation: w 3s steps(10) forwards;
+      color: #fff;
+    }
+    @keyframes w {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div><span>我这里一共只有十个字</span></div>
+</body>
+</html>
