@@ -1,0 +1,107 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-28 22:25:17
+ * @LastEditTime: 2021-03-28 22:58:22
+ * @LastEditors: Please set LastEditors
+ * @Description: 大数据热点图
+ * @FilePath: \Practice\media\30 - 大数据热点图.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大数据热点图</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+    .map {
+      position: relative;
+      width: 747px;
+      height: 617px;
+      background: url(./media/map.png);
+      margin: 0 auto;
+    }
+    .city {
+      color: #fff;
+      position: absolute;
+      top: 228px;
+      right: 191px;
+    }
+    .tb {
+      top: 499px;
+      right: 78px;
+    }
+    .gz {
+      top: 542px;
+      right: 191px;
+    }
+    .dotted {
+      width: 8px;
+      height: 8px;
+      background-color: #5ca2cd;
+      border-radius: 50%;
+    }
+    @keyframes pulse {
+      0% { }
+      70% {
+        /* transform: scale(1.2); 不要用，会同时把阴影变大 */
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+      }
+    }
+    .city div[class^=pulse] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      box-shadow: #5ca2cd 0px 0px 11px;
+      border-radius: 50%;
+      animation: pulse 2.1s linear infinite;
+    }
+    .city div.pulse2 {
+      animation-delay: .7s;
+    }
+    .city div.pulse3 {
+      animation-delay: 1.4s;
+    }
+  </style>
+</head>
+<body>
+  <div class="map">
+    <div class="city">
+      <!-- 中间的圆点 -->
+      <div class="dotted"></div>
+      <!-- 波纹 -->
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+    <div class="city tb">
+      <!-- 中间的圆点 -->
+      <div class="dotted"></div>
+      <!-- 波纹 -->
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+    <div class="city gz">
+      <!-- 中间的圆点 -->
+      <div class="dotted"></div>
+      <!-- 波纹 -->
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+  </div>
+</body>
+</html>
