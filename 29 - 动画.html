@@ -1,0 +1,71 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-28 21:17:26
+ * @LastEditTime: 2021-03-28 22:04:05
+ * @LastEditors: Please set LastEditors
+ * @Description: 动画
+ * @FilePath: \Practice\29 - 动画.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画</title>
+  <style>
+    /* 1.定义动画 */
+    @keyframes move {
+      /* 盒子左右移动 */
+      0% {
+        transform: translate(0px, 0px);
+      }
+      100% {
+        transform: translate(1000px, 0);
+      }
+      /* 盒子沿四周走 */
+      /* 25% {
+        transform: translate(1000px, 0px);
+      }
+      50% {
+        transform: translate(1000px, 400px);
+      }
+      75% {
+        transform: translate(0px, 400px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      } */
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: indianred;
+      /* 2.调用动画，必须要有两个属性animation-name和animation-duration */
+      /* 动画名称 */
+      /* animation-name: move; */
+      /* 动画完成时间 */
+      /* animation-duration: 5s; */
+      /* 运动曲线:ease | ease-in | ease-out | ease-in-out | linear匀速 */
+      /* animation-timing-function: linear; */
+      /* 何时开始（延时） */
+      /* animation-delay: 1s; */
+      /* 重复次数 iteration重复的，默认是1，可以设置无限次infinite */
+      /* animation-iteration-count: infinite; */
+      /* 是否反方向播放 默认是不反方向播放normal，若要反方向播放，值为alternate */
+      /* animation-direction: alternate; */
+      /* 动画结束后的状态，默认是回到起始状态backward，若要停在结束状态，值为forward */
+      /* animation-fill-mode: forwards; */
+      /* 简写 animation: name duration timing-function delay iteration-count direction fill-mode; */
+      animation: move 5s linear alternate forwards;
+    }
+    .box1:hover {
+      /* 鼠标悬浮，让盒子停下来 */
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body>
+  <p>打开页面，一个盒子从左边走到右边</p>
+  <div class="box1"></div>
+</body>
+</html>
