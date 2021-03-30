@@ -1,0 +1,93 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-30 20:24:48
+ * @LastEditTime: 2021-03-30 21:11:06
+ * @LastEditors: Please set LastEditors
+ * @Description: 3D呈现transform-style
+ * @FilePath: \Practice\34 - 3D呈现transform-style.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D呈现transform-style</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      perspective: 500px;
+    }
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 200px auto;
+      /* 保持3d效果 */
+      transform-style: preserve-3d;
+      transition: all .4s;
+    }
+    .box:hover {
+      transform: rotateY(60deg);
+    }
+    .box div {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: coral;
+    }
+    .box div:last-child {
+      background-color: darkgray;
+      transform: rotateX(60deg);
+    }
+    .box2 {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      /* 必须要加preserve-3d 否则看不到后面的盒子 */
+      transform-style: preserve-3d;
+      transition: all .4s;
+    }
+    .box2:hover {
+      transform: rotateY(180deg);
+    }
+    .front,
+    .back {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      font-size: 20px;
+    }
+    .front {
+      background-color: rgb(168, 207, 109);
+      z-index: 1;
+    }
+    .back {
+      background-color: rgb(162, 90, 199);
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div></div>
+    <div></div>
+  </div>
+  <h4 style="margin-top: 100px;text-align: center;">两面翻转盒子案例</h4>
+  <div class="box2">
+    <div class="front">这是盒子的正面</div>
+    <div class="back">我是背面哦</div>
+  </div>
+</body>
+</html>

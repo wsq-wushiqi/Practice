@@ -1,0 +1,50 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-29 23:09:28
+ * @LastEditTime: 2021-03-30 00:04:06
+ * @LastEditors: Please set LastEditors
+ * @Description: 3D转换
+ * @FilePath: \Practice\33 - 3D转换.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D转换</title>
+  <style>
+    body {
+      perspective: 500px;
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: cornflowerblue;
+      transform: translateX(100px) translateY(100px) translateZ(100px);
+      /* 简写 */
+      transform: translate3d(200px, 100px, 100px);
+    }
+    img {
+      display: block;
+      width: 320px;
+      height: 320px;
+      margin: 0 auto 100px;
+      transition: all 1s;
+    }
+    img:hover {
+      /* 沿x轴旋转 */
+      /* transform: rotateX(360deg); */
+      /* 沿y轴旋转 */
+      /* transform: rotateY(360deg); */
+      /* 沿z轴旋转,参数为正顺时针旋转，为负逆时针 */
+      transform: rotateZ(180deg);
+    }
+  </style>
+</head>
+<body>
+  <p>3D位移和透视</p>
+  <div class="box1"></div>
+  <p style="margin-top: 300px;">旋转</p>
+  <img src="./media/pig.jpg" alt="">
+</body>
+</html>
