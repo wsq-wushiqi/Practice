@@ -1,0 +1,139 @@
+<!--
+ * @Author: Wushiqi
+ * @Descripttion: 三栏布局
+ * @Date: 2021-05-16 16:37:59
+ * @LastEditors: Wushiqi
+ * @LastEditTime: 2021-05-16 17:53:24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三栏布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div[class^=box] {
+      width: 100%;
+      height: 200px;
+      background-color: coral;
+      margin-bottom: 20px;
+    }
+    /* div[class^=box] div {
+      height: 100%;
+    } */
+    .left {
+      background-color: cornflowerblue;
+    }
+    .center {
+      background-color: rgba(255, 255, 255, 0.566);
+    }
+    .right {
+      background-color: yellowgreen;
+    }
+    .box1 {
+      display: flex;
+    }
+    .box1 .left,
+    .box1 .right {
+      width: 300px;
+    }
+    .box1 .center {
+      flex: 1;
+    }
+    .box2 {
+      display: grid;
+      grid-template-columns: 300px auto 300px;
+    }
+    .box3 .left {
+      float: left;
+      width: 300px;
+      height: 100%;
+    }
+    .box3 .right {
+      float: right;
+      width: 300px;
+      height: 100%;
+    }
+    .box3 .center {
+      margin: 0 300px;
+      height: 100%;
+      overflow: auto;
+    }
+    /* 清除浮动 */
+    .box3::before,
+    .box3::after {
+      content: '';
+      display: block;
+      clear: right;
+    }
+    .box4 {
+      position: relative;
+    }
+    .box4 .left {
+      position: absolute;
+      left: 0;
+      width: 300px;
+      height: 100%;
+    }
+    .box4 .right {
+      position: absolute;
+      right: 0;
+      width: 300px;
+      height: 100%;
+    }
+    .box4 .center {
+      position: absolute;
+      left: 300px;
+      right: 300px;
+      height: 100%;
+    }
+    .box5 {
+      display: table;
+    }
+    .box5 div {
+      display: table-cell;
+    }
+    .box5 .left,
+    .box5 .right {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h4>第一种：flex布局</h4>
+  <div class="box1">
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+  </div>
+  <h4>第二种：grid布局</h4>
+  <div class="box2">
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+  </div>
+  <h4>第三种：浮动</h4>
+  <div class="box3">
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <!-- 注意：浮动的话，要将非浮动的元素放到最后 -->
+    <div class="center">当非float的元素和float的元素在一起的时候，如果非float元素在先，那么float的元素将被排斥也就是说，你的span是float:right，但是你文本还是float:none。【注意点：元素浮动后将自动转为块级元素】</div>
+  </div>
+  <h4>第四种：定位</h4>
+  <div class="box4">
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+  </div>
+  <h4>第五种：table布局</h4>
+  <div class="box5">
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+  </div>
+</body>
+</html>
