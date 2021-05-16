@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直居中</title>
+  <style>
+    div[class^=box] {
+      width: 200px;
+      height: 200px;
+      background-color: blueviolet;
+      margin: 30px auto;
+    }
+    div[class^=box] div {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.449);
+    }
+    h4 {
+      text-align: center;
+    }
+    .box1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box2 {
+      position: relative;
+    }
+    .box2 div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+    }
+    .box3 {
+      position: relative;
+    }
+    .box3 div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50px, -50px);
+    }
+  </style>
+</head>
+<body>
+  <h4>第一种：flex布局</h4>
+  <div class="box1">
+    <div></div>
+  </div>
+  <h4>第二种：绝对定位，知道子盒子宽高(margin)</h4>
+  <div class="box2">
+    <div></div>
+  </div>
+  <h4>第三种：绝对定位，知道子盒子宽高(translate)</h4>
+  <div class="box3">
+    <div></div>
+  </div>
+</body>
+</html>
